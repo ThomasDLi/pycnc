@@ -16,10 +16,7 @@ class cnc:
                 print("Ready.")
 
     def wait(self):
-        while True():
-            if(self.serial.in_waiting > 0):
-                if(self.serial.readline() == b"ready"):
-                    return
+        pass
 
     def format_int(self, num):
         return str(num).zfill(3)
