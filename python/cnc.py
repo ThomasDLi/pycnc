@@ -46,7 +46,6 @@ class cnc:
             pass
 
     def draw_image(self, image_path, image_x, image_y):
-        """not working ATM"""
         self.wait()
         image = Image.open(image_path)
         image = image.resize((image_x, image_y))
