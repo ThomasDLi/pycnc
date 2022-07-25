@@ -2,8 +2,8 @@
 Control your grbl-compatible cnc using python. 
 
 ## Setup
-Flash cnc_control to Arduino
-Drag python/cnc.py to directory of python project
+- Flash cnc_control to Arduino
+- Drag python/cnc.py to directory of python project
 
 ## Usage
 ```python
