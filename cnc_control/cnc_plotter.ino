@@ -63,22 +63,6 @@ void loop() {
 
     switch (data.substring(0, 1).toInt()) {
 
-      case 0:
-        left(data.substring(1).toInt());
-        break;
-
-      case 1:
-        right(data.substring(1).toInt());
-        break;
-
-      case 2:
-        up(data.substring(1).toInt());
-        break;
-
-      case 3:
-        down(data.substring(1).toInt());
-        break;
-
       case 4:
         pen_up();
         break;
@@ -97,7 +81,16 @@ void loop() {
 
       case 8:
         draw_image(data.substring(1, 4).toInt(), data.substring(4, 7).toInt(), data.substring(7));
-      
+        break;
+
+      case 0:
+        move_x(posit_x, data.substring(1).toInt());
+        break;
+
+      case 1:
+        move_y(posit_y, data.substring(1).toInt());
+        break;
+
     }
 
   }
