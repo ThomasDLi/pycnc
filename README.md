@@ -21,6 +21,7 @@ pen_up()
 pen_down()
 move_to(x, y)
 draw_line(starting_x, starting_y, ending_x, ending_y)
+Cnc.draw_image(path_to_img, width, height)
 done()
 ```
 
