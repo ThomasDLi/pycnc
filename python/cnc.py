@@ -42,8 +42,15 @@ class cnc:
         print(f"6{self.format_int(start_x)}{self.format_int(start_y)}{self.format_int(end_x)}{self.format_int(end_y)}".encode())
 
     def done(self):
-        while True:
-            pass
+        self.wait()
+
+    def move_x(self, x):
+        self.wait()
+        self.serial.write(f"0{self.format_int(x)}".encode())
+    
+    def move_y(self, y):
+        self.wait()
+        self.serial.write(f"1{self.format_int(y)}".encode())
 
     def draw_image(self, image_path, image_x, image_y):
         self.wait()
@@ -56,5 +63,4 @@ class cnc:
         image = list(map(int, image))
         image = "".join(list(map(str, image)))
         image = self.format_int(image_x) + self.format_int(image_y) + image
-        #print(f"8{image}".encode())
         self.serial.write(f"8{image}".encode())
