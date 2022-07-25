@@ -17,12 +17,14 @@ Cnc.done()
 
 ### Supported commands
 ```python
-pen_up()
-pen_down()
-move_to(x, y)
-draw_line(starting_x, starting_y, ending_x, ending_y)
-draw_image(path_to_img, width, height)
-done()
+pen_up() #duh
+pen_down() #duh
+move_to(x, y) #moves pen to coord
+draw_line(starting_x, starting_y, ending_x, ending_y) #moves pen to coord then draws a line until ending coord
+draw_image(path_to_img, width, height) #draws an image provided the path
+move_x() #moves pen along x axis; faster than move_to() for single axis movement
+move_y() #moves pen along y axis; faster than move_to() for single axis movement
+done() #must call at the end of code
 ```
 
 ## Requirements
