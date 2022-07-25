@@ -11,12 +11,15 @@ class cnc:
             print("Connecting to CNC...")
         self.serial = serial.Serial(serial_port, baud)
         if get_ready:
-            time.sleep(2)
+            self.wait()
             if verbose:
                 print("Ready.")
 
     def wait(self):
-        pass
+        while True:
+            if(self.serial.in_waiting > 0):
+                if(self.serial.readline().decode() == "ready\r\n"):
+                    break
 
     def format_int(self, num):
         return str(num).zfill(3)
